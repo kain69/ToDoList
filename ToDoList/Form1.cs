@@ -28,7 +28,6 @@ namespace ToDoList
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
             this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         
         //Structs
