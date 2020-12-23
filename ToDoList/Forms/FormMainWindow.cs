@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using ToDoList.Forms;
 
 namespace ToDoList
 {
@@ -62,10 +63,6 @@ namespace ToDoList
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
-                //Label Text Current Child Form
-                lblTittleChildForm.Text = currentBtn.Text;
-                lblTittleChildForm.ForeColor = currentBtn.ForeColor;
-
             }
         }
 
@@ -82,14 +79,33 @@ namespace ToDoList
             }
         }
 
+        private void OpenChildForm(Form childForm)
+        {
+            //Open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitleChildForm.Text = childForm.Text;
+        }
+
         private void Reset()
         {
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.HouseUser;
             iconCurrentChildForm.IconColor = RGBColors.color6;
-            lblTittleChildForm.Text = "Home";
-            lblTittleChildForm.ForeColor = RGBColors.color6;
+            lblTitleChildForm.Text = "Home";
+            lblTitleChildForm.ForeColor = RGBColors.color6;
         }
 
         //Events
@@ -109,21 +125,26 @@ namespace ToDoList
         private void btnUniversity_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new FormUniversity());
         }
 
         private void btnLife_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new FormUniversity());
+
         }
 
         private void btnHousework_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new FormUniversity());
         }
 
         private void btnSport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new FormSport());
         }
 
         //Drag Form
@@ -153,6 +174,13 @@ namespace ToDoList
             this.WindowState = FormWindowState.Minimized;
         }
 
+        /*//Method for current time and date
+        private void tmDateTime_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Now.ToLongDateString();
+            lblTime.Text = DateTime.Now.ToString("HH:mm:ssss");
+        }
+*/
         ////Remove transparent border in maximized state
         //private void ToDoList_Resize(object sender, EventArgs e)
         //{
