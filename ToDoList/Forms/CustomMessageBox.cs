@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace ToDoList.Forms
 {
-    public partial class FormHousework : Form
+    public partial class CustomMessageBox : Form
     {
-        public FormHousework()
+        public CustomMessageBox()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

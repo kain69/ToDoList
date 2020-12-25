@@ -37,17 +37,22 @@ namespace ToDoList
             this.btnUniversity = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMain = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.panelFooter = new System.Windows.Forms.Panel();
+            this.btnPlus = new FontAwesome.Sharp.IconButton();
+            this.btnMinus = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMain)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelFooter.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -61,7 +66,7 @@ namespace ToDoList
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 600);
+            this.panelMenu.Size = new System.Drawing.Size(200, 673);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSport
@@ -179,19 +184,19 @@ namespace ToDoList
             this.btnMain.TabStop = false;
             this.btnMain.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(61)))));
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.lblTitleChildForm);
-            this.panel1.Controls.Add(this.iconCurrentChildForm);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 43);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(61)))));
+            this.panelHeader.Controls.Add(this.btnMinimize);
+            this.panelHeader.Controls.Add(this.btnExit);
+            this.panelHeader.Controls.Add(this.lblTitleChildForm);
+            this.panelHeader.Controls.Add(this.iconCurrentChildForm);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(200, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(788, 43);
+            this.panelHeader.TabIndex = 1;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnMinimize
             // 
@@ -199,7 +204,7 @@ namespace ToDoList
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(711, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(699, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(43, 43);
             this.btnMinimize.TabIndex = 3;
@@ -212,7 +217,7 @@ namespace ToDoList
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(757, 0);
+            this.btnExit.Location = new System.Drawing.Point(745, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(43, 43);
             this.btnExit.TabIndex = 2;
@@ -232,7 +237,7 @@ namespace ToDoList
             // 
             // iconCurrentChildForm
             // 
-            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(61)))));
             this.iconCurrentChildForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconCurrentChildForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.HouseUser;
@@ -245,22 +250,76 @@ namespace ToDoList
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             // 
+            // panelFooter
+            // 
+            this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(61)))));
+            this.panelFooter.Controls.Add(this.btnPlus);
+            this.panelFooter.Controls.Add(this.btnMinus);
+            this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelFooter.Location = new System.Drawing.Point(0, 587);
+            this.panelFooter.Name = "panelFooter";
+            this.panelFooter.Size = new System.Drawing.Size(788, 43);
+            this.panelFooter.TabIndex = 3;
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPlus.FlatAppearance.BorderSize = 0;
+            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlus.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPlus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnPlus.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnPlus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnPlus.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPlus.IconSize = 32;
+            this.btnPlus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlus.Location = new System.Drawing.Point(702, 0);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.btnPlus.Size = new System.Drawing.Size(43, 43);
+            this.btnPlus.TabIndex = 9;
+            this.btnPlus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPlus.UseVisualStyleBackColor = true;
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinus.FlatAppearance.BorderSize = 0;
+            this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinus.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMinus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnMinus.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinus.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(161)))), ((int)(((byte)(251)))));
+            this.btnMinus.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinus.IconSize = 32;
+            this.btnMinus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinus.Location = new System.Drawing.Point(745, 0);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.btnMinus.Size = new System.Drawing.Size(43, 43);
+            this.btnMinus.TabIndex = 8;
+            this.btnMinus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMinus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMinus.UseVisualStyleBackColor = true;
+            // 
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panelDesktop.Controls.Add(this.panelFooter);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(200, 43);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(800, 557);
-            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Size = new System.Drawing.Size(788, 630);
+            this.panelDesktop.TabIndex = 4;
             // 
             // ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(988, 673);
             this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -270,9 +329,11 @@ namespace ToDoList
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMain)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panelFooter.ResumeLayout(false);
+            this.panelDesktop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,12 +347,15 @@ namespace ToDoList
         private FontAwesome.Sharp.IconButton btnHousework;
         private FontAwesome.Sharp.IconButton btnLife;
         private System.Windows.Forms.PictureBox btnMain;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelHeader;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Panel panelFooter;
         private System.Windows.Forms.Panel panelDesktop;
+        private FontAwesome.Sharp.IconButton btnPlus;
+        private FontAwesome.Sharp.IconButton btnMinus;
     }
 }
 

@@ -63,6 +63,9 @@ namespace ToDoList
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = color;
+                //Footer Curent Child Form
+                btnPlus.IconColor = color;
+                btnMinus.IconColor = color;
             }
         }
 
@@ -106,6 +109,8 @@ namespace ToDoList
             iconCurrentChildForm.IconColor = RGBColors.color6;
             lblTitleChildForm.Text = "Home";
             lblTitleChildForm.ForeColor = RGBColors.color6;
+            btnPlus.IconColor = RGBColors.color6;
+            btnMinus.IconColor = RGBColors.color6;
         }
 
         //Events
@@ -131,14 +136,14 @@ namespace ToDoList
         private void btnLife_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new FormUniversity());
+            OpenChildForm(new FormLife());
 
         }
 
         private void btnHousework_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new FormUniversity());
+            OpenChildForm(new FormHousework());
         }
 
         private void btnSport_Click(object sender, EventArgs e)
